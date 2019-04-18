@@ -1,0 +1,33 @@
+<mat-toolbar>
+  <h1>New Message</h1>
+  <button mat-button [mat-dialog-close]="true"><i class="material-icons">close</i></button>
+</mat-toolbar>
+<div mat-dialog-content>
+
+  <mat-form-field appearance="outline">
+    <mat-label>From</mat-label>
+    <input matInput placeholder="From" [formControl]="fromemail" readonly>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>To</mat-label>
+    <input matInput placeholder="To">
+  </mat-form-field>
+
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>Cc</mat-label>
+    <input matInput placeholder="Cc">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>BCC</mat-label>
+    <input matInput placeholder="BCC">
+  </mat-form-field> -->
+  <mat-form-field appearance="outline">
+    <mat-label>Subject</mat-label>
+    <input matInput placeholder="subject">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Message</mat-label>
+    <textarea matInput placeholder="Message" rows="6"></textarea>
+  </mat-form-field>
+  <button mat-button>Send</button>
+</div>

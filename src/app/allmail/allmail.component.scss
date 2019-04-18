@@ -1,0 +1,16 @@
+#allmail{
+    .allMailList{
+        width:100;
+    }
+   
+    mat-card{
+      width: 100%;
+      margin: 20px;
+    }
+
+    .maillistitemoutter{
+      height:100vh;
+      overflow-y:scroll;
+    }
+    
+}

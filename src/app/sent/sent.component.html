@@ -1,0 +1,38 @@
+<section id="allmail" class="content">
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start">    
+        <div fxLayout="row" fxLayoutAlign="start start">  
+          <app-sidenav></app-sidenav>  
+        </div>  
+        <div fxLayout="row" fxFlex="85" fxLayoutAlign="space-between center" >
+            
+                <div fxLayout="row wrap" fxFlex="50" class="maillistitemoutter">     
+                    <div fxLayout="column" fxFlex="100" >              
+                    <div fxLayout="row" fxFlex="100"  class="maillistitem">                   
+                  
+                      
+                      <mat-card matRipple class="example-card">
+                          <mat-card-header>                          
+                              
+                          <mat-card-title></mat-card-title>
+                            <mat-card-subtitle></mat-card-subtitle>
+                          </mat-card-header>
+                         
+                          <mat-card-content>
+                            <p>
+                                This Area Is EMpty
+                            </p>
+                          </mat-card-content>
+                          
+                        </mat-card>
+                 
+                  
+                </div>
+              </div>
+            </div>
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start">
+              <app-showmail fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start" [childmailId]=maildatabyId></app-showmail>
+            </div>
+        </div>    
+    </div>
+  </section>
+  

@@ -1,0 +1,41 @@
+<div id="showmail" fxFlex="100" fxLayout="row">
+    <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="start start" *ngIf="childmailId" class="showmailcontent">          
+        <div fxFlex="100" fxLayout="row wrap" class="mailheader">
+            <p>{{childmailId.subject}}</p>              
+             <i class="material-icons">label</i>
+
+        </div>  
+        <mat-card>
+          <mat-card-header>                          
+               <img mat-card-avatar src="http://angular-material.fusetheme.com/{{childmailId.from.avatar}}" alt="{{childmailId.from.name}}">
+               <!-- <img mat-card-avatar [src]="childmailId.from.avatar!= null ? http://angular-material.fusetheme.com/{{childmailId.from.avatar}} : https://ei.is.tuebingen.mpg.de/assets/noEmployeeImage_md-eaa7c21cc21b1943d77e51ab00a5ebe9.png" alt="{{childmailId.from.name}}"> -->
+          <mat-card-title>{{childmailId.from.name}}</mat-card-title>
+            <mat-card-subtitle>to {{childmailId.to[0].name}}</mat-card-subtitle>            
+          </mat-card-header>
+          <mat-accordion>
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                 Show Details
+                </mat-panel-title>
+                
+              </mat-expansion-panel-header>
+              <mat-panel-description fxLayout="column">
+                 <p> <strong>From:</strong> {{childmailId.from.name}}</p>
+                 <p> <strong>To :</strong> {{childmailId.to[0].email}}</p>
+                 <p><strong>Date:</strong> {{childmailId.time}}</p>
+                 </mat-panel-description>
+            </mat-expansion-panel>
+          </mat-accordion>
+          <mat-card-content [innerHTML]=childmailId.message>
+            
+                         
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>{{childmailId.time}}</button>
+            <button mat-button>{{childmailId.from.name}}</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+  </div>  

@@ -1,0 +1,29 @@
+.mat-dialog-container {
+  padding: 0;
+}
+
+.mat-dialog-content {
+  margin: 0;
+}
+
+.mat-toolbar {
+  background: #039be5;
+  color: #fff;
+  position: relative;
+
+  .mat-button {
+    position: absolute;
+    right: 15px;
+    border-radius: 50%;
+    
+  }
+}
+
+
+.mat-dialog-content {
+  padding: 30px 15px;
+
+  .mat-form-field {
+    width: 100%;
+  }
+}

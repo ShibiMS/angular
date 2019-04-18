@@ -1,0 +1,41 @@
+#sidenav{
+    background:#736e6e;
+    height:100vh;
+    width: 200px;
+    .sidenavmenus{
+        width: 100%;
+        color:#fff;        
+        .composemail{
+           .mat-raised-button{
+                color: #fff;
+                background-color: #069be5;
+                width: 100%;
+                margin: 30px;
+           }
+        }
+        .mailfolder{
+            width:100%;
+            .mat-button{
+                width:100%;
+                text-align: left;                
+                margin: 10px 0;
+                .material-icons{
+                    font-size: 16px;
+                    width: 16px;
+                    height: 16px;
+                    min-width: 16px;
+                    min-height: 16px;
+                    line-height: 16px;
+                    margin-right: 16px;
+                }
+                }
+        }
+        .mat-button:hover{    
+         background: #069be5;             
+        }
+        .active-link{
+            background: #069be5;  
+        }
+        }
+    }
+    

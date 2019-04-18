@@ -1,0 +1,52 @@
+#showmail {
+  .showmailcontent {
+    padding: 30px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px #888888;
+
+    .mailheader {
+      box-shadow: 0px 0px 5px 0px #888888;
+      margin-bottom: 5px;
+      padding: 5px;
+
+      p {
+        width: 85%;
+        margin: 0 0 20px 0;
+      }
+
+      .material-icons {
+        margin: 0 auto;
+      }
+    }
+    mat-expansion-panel{
+        width: 45%;
+        margin-bottom: 20px;
+        background: none;
+        
+        margin-bottom: 20px;
+        box-shadow: 0 0 0 0;
+        
+    }
+    .mat-expansion-panel-header{
+        padding: 0 10px;
+        height: 30px !important;
+    }
+    .mat-expansion-panel-header-title{
+        margin-right:5px;
+    }
+    .mat-expansion-panel-body{
+        padding:0 10px !important;
+        mat-panel-description{
+            p{
+                margin: 0;
+            }
+        }
+    }
+  
+    
+  }
+  
+    
+
+}
