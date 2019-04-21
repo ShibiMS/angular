@@ -4,6 +4,7 @@ import { SentComponent } from './sent.component';
 //import { SidenavComponent } from '../sidenav/sidenav.component';
 import { ShowmailComponent } from '../showmail/showmail.component';
 import { RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
 //import { SidenavModule } from '../sidenav/sidenav.module';
 //import { AllmailModule } from '../allmail/allmail.module';
 
@@ -23,7 +24,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FlexLayoutModule
     //AllmailModule,
     //SidenavModule
   ]

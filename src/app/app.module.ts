@@ -12,9 +12,10 @@ import { AllmailModule } from './allmail/allmail.module';
 import { HttpClientModule } from '@angular/common/http';
 import{ MailFakeDb } from './mail';
 //import { SentComponent } from './sent/sent.component';
-import { SentModule } from './sent/sent.module';
+//import { SentModule } from './sent/sent.module';
+//import { SidenavModule } from './sidenav/sidenav.module';
 
-//import { SidenavComponent } from './sidenav/sidenav.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { SentModule } from './sent/sent.module';
     FooterComponent,
     
     //SentComponent,
-    //SidenavComponent
+    SidenavComponent
       
   ],
   imports: [
@@ -32,7 +33,8 @@ import { SentModule } from './sent/sent.module';
     FlexLayoutModule,
     BrowserAnimationsModule,
     AllmailModule,
-    SentModule,
+    //SentModule,
+    //SidenavModule,
     MatButtonModule, MatCheckboxModule,MatTableModule,MatPaginatorModule,HttpClientModule
   ],
   providers: [MailFakeDb],

@@ -1,16 +1,8 @@
-<section id="allmail" class="content">
-    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start">    
-        <div fxLayout="row" fxLayoutAlign="start start">  
-          <app-sidenav></app-sidenav>  
-        </div>  
-        <div fxLayout="row" fxFlex="85" fxLayoutAlign="space-between center" >
-            
-                <div fxLayout="row wrap" fxFlex="50" class="maillistitemoutter">     
-                    <div fxLayout="column" fxFlex="100" >              
+<section id="allmail" class="content" fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start">
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start"> 
+                <div fxLayout="row wrap" fxFlex="50" class="maillistitemoutter">    
                     <div fxLayout="row" fxFlex="100"  class="maillistitem" *ngFor="let mailitem of data, let i=index">                   
-                  
-                      
-                      <mat-card matRipple class="example-card" (click)="showMailbyID(mailitem.id)">
+                        <mat-card matRipple class="example-card" (click)="showMailbyID(mailitem.id)">
                           <mat-card-header>                          
                                <img mat-card-avatar src="http://angular-material.fusetheme.com/{{mailitem.from.avatar}}" alt="{{mailitem.from.name}}">
                           <mat-card-title>{{mailitem.from.name}}</mat-card-title>
@@ -30,12 +22,12 @@
                  
                   
                 </div>
-              </div>
+             
             </div>
-            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start">
-              <app-showmail fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start" [childmailId]=maildatabyId></app-showmail>
+            <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start start">
+              <app-showmail [childmailId]=maildatabyId></app-showmail>
             </div>
-        </div>    
+        
     </div>
   </section>
   

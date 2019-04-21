@@ -1,12 +1,7 @@
-<section id="allmail" class="content">
-  <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start">    
-      <div fxLayout="row" fxLayoutAlign="start start">  
-        <app-sidenav></app-sidenav>  
-      </div>  
-      <div fxLayout="row" fxFlex="85" fxLayoutAlign="space-between center" >
-          
+<section id="allmail" class="content" fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start">
+  <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start">           
               <div fxLayout="row wrap" fxFlex="50" class="maillistitemoutter">     
-                  <div fxLayout="column" fxFlex="100" >              
+                              
                   <div fxLayout="row" fxFlex="100"  class="maillistitem" *ngFor="let mailitem of data, let i=index">                   
                 
                     
@@ -30,11 +25,11 @@
                
                 
               </div>
-            </div>
+            
           </div>
-          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start">
+          <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start start">
             <app-showmail fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start" [childmailId]=maildatabyId></app-showmail>
           </div>
-      </div>    
+        
   </div>
 </section>

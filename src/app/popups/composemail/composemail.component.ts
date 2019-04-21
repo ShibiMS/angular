@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl,FormBuilder, Validators,ValidationErrors, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-composemail',
   templateUrl: './composemail.component.html',
@@ -7,10 +7,20 @@ import { FormControl } from '@angular/forms';
   encapsulation:ViewEncapsulation.None
 })
 export class ComposemailComponent implements OnInit {
-  fromemail = new FormControl('johndoe@creapond.com');
-  constructor() { }
+  mailcomposeForm: FormGroup;
+  constructor(private fb:FormBuilder) { }
 
-  ngOnInit() {
+   ngOnInit() {
+    this.mailcomposeForm = this.fb.group({
+      fromemail: ['johndoe@creapond.com'],
+      toemail:['', [Validators.required, Validators.email]],
+      subject:['', Validators.required],
+      message:['', Validators.required]
+    })
   }
 
+  get f() { return this.mailcomposeForm.controls; }
+  submitComposeMail(){
+    console.log('submitComposeMail',JSON.stringify(this.mailcomposeForm.value));
+  }
 }
